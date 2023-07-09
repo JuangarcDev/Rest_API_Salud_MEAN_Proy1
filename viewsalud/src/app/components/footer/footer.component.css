@@ -1,0 +1,9 @@
+footer {
+    position: fixed; /* Establece la posición fija */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f2f2f2; /* Color de fondo del footer */
+    padding: 10px; /* Ajusta el padding según tu preferencia */
+    margin: 0; /* Elimina el margen vertical */
+  }
