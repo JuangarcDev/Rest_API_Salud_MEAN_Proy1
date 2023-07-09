@@ -10,7 +10,66 @@
     <app-header></app-header>
 </header>
 <body>
-    <p>listar-paciente works!</p>
+    <div class="container mt-8">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <span class="titulo">Listado de Pacientes</span>
+                        <button class="btn btn-success float-end">Agregar Paciente</button>
+                        <table class="table table-striped mt-4">
+                            <thead>
+                              <tr>
+                                <th scope="col">CC</th>
+                                <th scope="col">Nombres</th>
+                                <th scope="col">Apellidos</th>
+                                <th scope="col">Fecha Nacimiento</th>
+                                <th scope="col">edad</th>
+                                <th scope="col"></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td >100200300</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>2000-05-15</td>
+                                <td>23</td>
+                                <td>
+                                    <i class="fas fa-sharp fa-solid fa-pen-to-square text-primary"></i>
+                                    <i class="fas fa-solid fa-trash text-danger"></i>
+                                </td>
+
+                              </tr>
+                              <tr>
+                                <td >400500600</td>
+                                <td>Steven</td>
+                                <td>Odgids</td>
+                                <td>1998-04-25</td>
+                                <td>25</td>
+                                <td>
+                                    <i class="fas fa-sharp fa-solid fa-pen-to-square text-primary"></i>
+                                    <i class="fas fa-solid fa-trash text-danger"></i>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td >700800900</td>
+                                <td>Maria</td>
+                                <td>Losd</td>
+                                <td>1990-01-10</td>
+                                <td>33</td>
+                                <td>
+                                    <i class="fas fa-sharp fa-solid fa-pen-to-square text-primary"></i>
+                                    <i class="fas fa-solid fa-trash text-danger"></i>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <footer>
     <app-footer></app-footer>
