@@ -21,25 +21,38 @@
                                 <input type="text" formControlName="cedula"
                                     class="form-control form-control-lg" placeholder="Numero Cedula">
                                 <div class="text-danger"
-                                    *ngIf="pacienteForm.get('cedula')?.hasError('required')">
+                                    *ngIf="pacienteForm.get('cedula')?.hasError('required') && pacienteForm.get('cedula')?.touched">
                                     <span>El numero de la Cedula es <strong>obligatorio</strong></span>
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <input type="text" formControlName="nombres"
                                     class="form-control form-control-lg" placeholder="Nombres">
+                                <div class="text-danger"
+                                    *ngIf="pacienteForm.get('nombres')?.hasError('required') && pacienteForm.get('nombres')?.touched">
+                                    <span>El nombre es <strong>obligatorio</strong></span>
+                                </div>
                             </div>
                             <div class="mb-3">
                                 <input type="text" formControlName="apellidos"
                                     class="form-control form-control-lg" placeholder="Apellidos">
+                                <div class="text-danger"
+                                    *ngIf="pacienteForm.get('apellidos')?.hasError('required') && pacienteForm.get('apellidos')?.touched">
+                                <span>El apellido es <strong>obligatorio</strong></span>
+                                </div>
                             </div>
                             <div class="mb-3">
+                                <label class="form-label">Fecha de Nacimiento</label>
                                 <input type="date" formControlName="fechaNacimiento"
                                     class="form-control form-control-lg" placeholder="Fecha Nacimiento">
+                                <div class="text-danger"
+                                    *ngIf="pacienteForm.get('fechaNacimiento')?.hasError('required') && pacienteForm.get('fechaNacimiento')?.touched">
+                                <span>La fecha de nacimiento es <strong>obligatoria</strong></span>
+                                </div>
                             </div>
                             <div class="mb-3">
                                 <button routerLink="/listar-paciente" class="btn btn-secondary btn-lg float-start">Cancelar</button>
-                                <button type="submit" class="btn btn-success btn-lg float-end">Aceptar</button>
+                                <button type="submit" [disabled]="pacienteForm.invalid" class="btn btn-success btn-lg float-end">Aceptar</button>
                             </div>
                         </form>
                     </div>

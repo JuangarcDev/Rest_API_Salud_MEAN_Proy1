@@ -11,21 +11,6 @@ export class Paciente {
         this.apellidos = apellidos;
         // se inicializa el tipo Date
         this.fechaNacimiento = fechaNacimiento;
-        this.edad = this.calcularEdad();
+        this.edad = edad;
     }
-
-    //Se calcula la edad mediante FechaNacimiento
-    private calcularEdad(): number {
-        const today = new Date();
-        const birthDate = new Date(this.fechaNacimiento);
-    
-        let age = today.getFullYear() - birthDate.getFullYear();
-        const monthDiff = today.getMonth() - birthDate.getMonth();
-    
-        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
-          age--;
-        }
-    
-        return age;
-      }
 }
