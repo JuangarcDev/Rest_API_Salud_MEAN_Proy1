@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
-import { FormGroup, FormBuilder, Validators, AbstractControl  } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, AbstractControl, FormControlName  } from '@angular/forms';
 
 function fechaNacimientoValidator(control: AbstractControl): { [key: string]: boolean } | null {
   const fechaNacimiento = new Date(control.value);
@@ -19,19 +19,23 @@ function fechaNacimientoValidator(control: AbstractControl): { [key: string]: bo
   templateUrl: './crear-paciente.component.html',
   styleUrls: ['./crear-paciente.component.css']
 })
-export class CrearPacienteComponent {
+export class CrearPacienteComponent implements OnInit {
   pacienteForm: FormGroup;
 
   constructor(private fb: FormBuilder) {
     this.pacienteForm = this.fb.group({
-      cedula: ['', Validators.required],
+      cedula: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
       nombres: ['', Validators.required],
       apellidos: ['', Validators.required],
-      fechaNacimiento: ['', [Validators.required, fechaNacimientoValidator]],
+      fechaNacimiento: ['',[fechaNacimientoValidator, Validators.required]],
     })
   }
 
   agregarPaciente() {
     console.log(this.pacienteForm)
+  }
+
+  ngOnInit(): void {
+    
   }
 }

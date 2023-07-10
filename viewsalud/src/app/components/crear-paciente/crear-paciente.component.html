@@ -16,22 +16,26 @@
                 <div class="card">
                     <div class="card-body text-center">
                         <span class="titulo">Crear Nuevo Paciente</span>
-                        <form class="mb-4" [formGroup]="pacienteForm"(ngSubmit)="agregarPaciente()">
+                        <form class="mb-4" [formGroup]="pacienteForm" (ngSubmit)="agregarPaciente()">
                             <div class="mb-3" >
                                 <input type="text" formControlName="cedula"
-                                class="form-control form-control-lg" placeholder="Numero Cedula">
+                                    class="form-control form-control-lg" placeholder="Numero Cedula">
+                                <div class="text-danger"
+                                    *ngIf="pacienteForm.get('cedula')?.hasError('required')">
+                                    <span>El numero de la Cedula es <strong>obligatorio</strong></span>
+                                </div>
                             </div>
                             <div class="mb-3">
                                 <input type="text" formControlName="nombres"
-                                class="form-control form-control-lg" placeholder="Nombres">
+                                    class="form-control form-control-lg" placeholder="Nombres">
                             </div>
                             <div class="mb-3">
                                 <input type="text" formControlName="apellidos"
-                                class="form-control form-control-lg" placeholder="Apellidos">
+                                    class="form-control form-control-lg" placeholder="Apellidos">
                             </div>
                             <div class="mb-3">
                                 <input type="date" formControlName="fechaNacimiento"
-                                 class="form-control form-control-lg" placeholder="Fecha Nacimiento">
+                                    class="form-control form-control-lg" placeholder="Fecha Nacimiento">
                             </div>
                             <div class="mb-3">
                                 <button routerLink="/listar-paciente" class="btn btn-secondary btn-lg float-start">Cancelar</button>
