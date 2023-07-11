@@ -6,13 +6,10 @@ const app = express();
 
 //Conectar a la BD
 conectarDB();
-
+app.use(express.json());
 app.use('/api/paciente', require('./routes/paciente'));
 
-//Definir ruta principal
-/*app.get('/', (req, res) => {
-    res.send('Hola mundo Facherito')
-})*/
+
 
 app.listen(4000, () => {
     console.log('El servidor esta desplegado correctamente')
