@@ -53,3 +53,38 @@ exports.actualizarPaciente =async (req, res) => {
         res.status(500).send('hubo un error');
     }
 }
+
+exports.obtenerPacienteid =async (req, res) => {
+
+    try {
+        let paciente = await Paciente.findById(req.params.id);
+
+        if(!paciente) {
+            res.status(404).json({ msg: 'No existe el paciente solicitado' })
+        }
+
+        res.json(paciente);
+
+    } catch (error) {
+        console.log(error);
+        res.status(500).send('hubo un error');
+    }
+}
+
+exports.eliminarPaciente =async (req, res) => {
+
+    try {
+        let paciente = await Paciente.findById(req.params.id);
+
+        if(!paciente) {
+            res.status(404).json({ msg: 'No existe el paciente solicitado' })
+        }
+        
+        await Paciente.findOneAndRemove({ _id: req.params.id})
+        res.json({msg: 'Paciente eliminado con exito'});
+
+    } catch (error) {
+        console.log(error);
+        res.status(500).send('hubo un error');
+    }
+}
