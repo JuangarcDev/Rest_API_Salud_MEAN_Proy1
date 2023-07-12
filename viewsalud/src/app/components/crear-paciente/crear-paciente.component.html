@@ -26,18 +26,18 @@
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <input type="text" formControlName="nombres"
-                                    class="form-control form-control-lg" placeholder="Nombres">
+                                <input type="text" formControlName=""
+                                    class="form-control form-control-lg" placeholder="">
                                 <div class="text-danger"
-                                    *ngIf="pacienteForm.get('nombres')?.hasError('required') && pacienteForm.get('nombres')?.touched">
+                                    *ngIf="pacienteForm.get('')?.hasError('required') && pacienteForm.get('')?.touched">
                                     <span>El nombre es <strong>obligatorio</strong></span>
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <input type="text" formControlName="apellidos"
-                                    class="form-control form-control-lg" placeholder="Apellidos">
+                                <input type="text" formControlName="apellido"
+                                    class="form-control form-control-lg" placeholder="Apellido">
                                 <div class="text-danger"
-                                    *ngIf="pacienteForm.get('apellidos')?.hasError('required') && pacienteForm.get('apellidos')?.touched">
+                                    *ngIf="pacienteForm.get('apellido')?.hasError('required') && pacienteForm.get('apellido')?.touched">
                                 <span>El apellido es <strong>obligatorio</strong></span>
                                 </div>
                             </div>

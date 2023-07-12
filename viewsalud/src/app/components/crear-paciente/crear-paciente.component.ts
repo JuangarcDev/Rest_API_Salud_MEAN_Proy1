@@ -31,8 +31,8 @@ export class CrearPacienteComponent implements OnInit {
               private toastr: ToastrService) {
     this.pacienteForm = this.fb.group({
       cedula: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
-      nombres: ['', Validators.required],
-      apellidos: ['', Validators.required],
+      nombre: ['', Validators.required],
+      apellido: ['', Validators.required],
       fechaNacimiento: ['',[fechaNacimientoValidator, Validators.required]],
     })
   }
@@ -44,9 +44,9 @@ export class CrearPacienteComponent implements OnInit {
   
     const PACIENTE: Paciente = {
       _id: this.pacienteForm.get('cedula')?.value,
-      nombres: this.pacienteForm.get('nombres')?.value,
-      apellidos: this.pacienteForm.get('apellidos')?.value,
-      fechaNacimiento: this.pacienteForm.get('fechaNacimiento')?.value,
+      nombre: this.pacienteForm.get('nombre')?.value,
+      apellido: this.pacienteForm.get('apellido')?.value,
+      fechaNacimiento: parseISO(this.pacienteForm.get('fechaNacimiento')?.value),
       //Se calcula la edad mediante FechaNacimiento
       edad: differenceInYears(new Date(), parseISO(this.pacienteForm.get('fechaNacimiento')?.value)),
     }
