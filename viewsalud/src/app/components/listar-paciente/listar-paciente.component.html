@@ -37,7 +37,7 @@
                                 <td>{{pacientes.edad}}</td>
                                 <td>
                                     <i class="fas fa-sharp fa-solid fa-pen-to-square text-primary"></i>
-                                    <i class="fas fa-solid fa-trash text-danger"></i>
+                                    <i (click)="eliminarPaciente(pacientes._id)" class="fas fa-solid fa-trash text-danger"></i>
                                 </td>
                               </tr>
                             </tbody>

@@ -11,6 +11,10 @@ export class PacienteService {
   constructor(private http: HttpClient) { }
 
   getPacientes(): Observable<any> {
-    return this.http.get(this.urlpaciente)
+    return this.http.get(this.urlpaciente);
+  }
+
+  eliminarPaciente(id: string): Observable<any> {
+    return this.http.delete(this.urlpaciente + id);
   }
 }
