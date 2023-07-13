@@ -1,1 +1,54 @@
-<p>crear-doctor works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<header>
+    <app-header></app-header>
+</header>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="card">
+                    <div class="card-body text-center" id="formulario-container">
+                        <span class="titulo">Nuevo Doctor</span>
+                        <form class="mt-4">
+                            <div class="mb-3">
+                                <input type="text" class="form-control form-control-lg" placeholder="Nombres">
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control form-control-lg" placeholder="Apellidos">
+                            </div>
+                            <div class="mb-3">
+                                <label for="disabledSelect" class="form-label">Especialidad</label>
+                                <select id="disabledSelect" class="form-select">
+                                  <option>Medicina general</option>
+                                  <option>Cardiología</option>
+                                  <option>Medicina interna</option>
+                                  <option>Dermatología</option>
+                                  <option>Rehabilitación física</option>
+                                  <option>Psicología</option>
+                                  <option>Odontología</option>
+                                  <option>Radiología</option>
+                                </select>
+                            </div>                              
+                            <div class="mb-3">
+                                <input type="number" class="form-control form-control-lg" placeholder="Consultorio">
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control form-control-lg" placeholder="Email">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+    <app-footer></app-footer>
+</footer>
+</html>
