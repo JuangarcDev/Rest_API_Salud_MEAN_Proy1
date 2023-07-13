@@ -19,11 +19,19 @@
                             <div class="mb-3">
                                 <input type="text" formControlName="nombre"
                                 class="form-control form-control-lg" placeholder="Nombres">
+                                <div class="text-danger" 
+                                    *ngIf="doctorForm.get('nombre')?.hasError('required') && doctorForm.get('nombre')?.touched">
+                                    <span>El nombre del doctor es <strong>obligatorio</strong></span>
+                                </div>
                             </div>
                             <div class="mb-3">
                                 <input type="text" formControlName="apellido"
                                  class="form-control form-control-lg" placeholder="Apellidos">
-                            </div>
+                                 <div class="text-danger"
+                                    *ngIf="doctorForm.get('apellido')?.hasError('required') && doctorForm.get('apellido')?.touched">
+                                    <span>El apellido del doctor es <strong>obligatorio</strong></span>
+                                </div>
+                                </div>
                             <div class="mb-3">
                                 <label for="disabledSelect" class="form-label">Especialidad</label>
                                 <select id="disabledSelect" formControlName="especialidad" class="form-select">
@@ -36,18 +44,30 @@
                                   <option>Odontología</option>
                                   <option>Radiología</option>
                                 </select>
+                                <div class="text-danger"
+                                    *ngIf="doctorForm.get('especialidad')?.hasError('required') && doctorForm.get('especialidad')?.touched">
+                                    <span>La especialidad del doctor es <strong>obligatoria</strong></span>
+                                </div>
                             </div>                              
                             <div class="mb-3">
                                 <input type="number" formControlName="consultorio"
                                  class="form-control form-control-lg" placeholder="Consultorio">
-                            </div>
+                                 <div class="text-danger"
+                                    *ngIf="doctorForm.get('consultorio')?.hasError('required') && doctorForm.get('consultorio')?.touched">
+                                    <span>El numero de consultorio es <strong>obligatorio</strong></span>
+                                </div>
+                                </div>
                             <div class="mb-3">
                                 <input type="email" formControlName="correo"
                                 class="form-control form-control-lg" placeholder="Email">
+                                <div class="text-danger"
+                                    *ngIf="doctorForm.get('correo')?.hasError('required') && doctorForm.get('correo')?.touched">
+                                    <span>El email del doctor es <strong>obligatorio</strong></span>
+                                </div>
                             </div>
                             <div class="mb-3">
                                 <button routerLink="/listar-doctor" class="btn btn-secondary btn-lg float-start">Cancelar</button>
-                                <button type="submit" class="btn btn-success btn-lg float-end">Aceptar</button>
+                                <button type="submit" [disabled]="doctorForm.invalid" class="btn btn-success btn-lg float-end">Aceptar</button>
                             </div>
                         </form>
                     </div>

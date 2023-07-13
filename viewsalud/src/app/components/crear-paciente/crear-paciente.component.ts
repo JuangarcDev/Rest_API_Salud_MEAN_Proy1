@@ -87,7 +87,8 @@ export class CrearPacienteComponent implements OnInit {
     if(this.id !== null){
       this.titulo = 'Editar Paciente';
       this._pacienteService.editarPaciente(this.id).subscribe(data =>{
-        this.pacienteForm.setValue({
+        this.pacienteForm.get('cedula')?.disable();
+        this.pacienteForm.patchValue({
           cedula: data.cedula,
           nombre: data.nombre,
           apellido: data.apellido,
