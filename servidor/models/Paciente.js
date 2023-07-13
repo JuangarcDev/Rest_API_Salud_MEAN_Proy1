@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 
 const PacienteSchema = mongoose.Schema({
+    cedula: {
+        type: String,
+        required: true
+    },
     nombre: {
         type: String,
         required: true

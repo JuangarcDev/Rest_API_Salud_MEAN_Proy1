@@ -10,32 +10,32 @@
     <app-header></app-header>
 </header>
 <body>
-    <div class="container mt-7">
+    <div class="container mt-8">
         <div class="row">
             <div class="col-lg-6 offset-lg-3">
                 <div class="card">
-                    <div class="card-body text-center">
-                        <span class="titulo">Crear Nuevo Paciente</span>
+                    <div class="card-body text-center" id="formulario-container">
                         <form class="mb-4" [formGroup]="pacienteForm" (ngSubmit)="agregarPaciente()">
                             <div class="mb-3" >
+                                <span class="titulo">{{ titulo }}</span>
                                 <input type="text" formControlName="cedula"
-                                    class="form-control form-control-lg" placeholder="Numero Cedula">
+                                    class="form-control form-control-lg" placeholder="Numero de Cedula">
                                 <div class="text-danger"
                                     *ngIf="pacienteForm.get('cedula')?.hasError('required') && pacienteForm.get('cedula')?.touched">
                                     <span>El numero de la Cedula es <strong>obligatorio</strong></span>
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <input type="text" formControlName=""
-                                    class="form-control form-control-lg" placeholder="">
+                                <input type="text" formControlName="nombre"
+                                    class="form-control form-control-lg" placeholder="Nombres">
                                 <div class="text-danger"
-                                    *ngIf="pacienteForm.get('')?.hasError('required') && pacienteForm.get('')?.touched">
+                                    *ngIf="pacienteForm.get('nombre')?.hasError('required') && pacienteForm.get('nombre')?.touched">
                                     <span>El nombre es <strong>obligatorio</strong></span>
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <input type="text" formControlName="apellido"
-                                    class="form-control form-control-lg" placeholder="Apellido">
+                                    class="form-control form-control-lg" placeholder="Apellidos">
                                 <div class="text-danger"
                                     *ngIf="pacienteForm.get('apellido')?.hasError('required') && pacienteForm.get('apellido')?.touched">
                                 <span>El apellido es <strong>obligatorio</strong></span>

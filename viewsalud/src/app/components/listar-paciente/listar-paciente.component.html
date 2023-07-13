@@ -30,13 +30,13 @@
                             </thead>
                             <tbody>
                               <tr *ngFor="let pacientes of listPacientes">
-                                <td >100200300</td>
+                                <td >{{pacientes.cedula}}</td>
                                 <td>{{pacientes.nombre}}</td>
                                 <td>{{pacientes.apellido}}</td>
                                 <td>{{pacientes.fechaNacimiento}}</td>
                                 <td>{{pacientes.edad}}</td>
                                 <td>
-                                    <i class="fas fa-sharp fa-solid fa-pen-to-square text-primary"></i>
+                                    <i [routerLink]="['/editar-paciente', pacientes._id]" class="fas fa-sharp fa-solid fa-pen-to-square text-primary"></i>
                                     <i (click)="eliminarPaciente(pacientes._id)" class="fas fa-solid fa-trash text-danger"></i>
                                 </td>
                               </tr>

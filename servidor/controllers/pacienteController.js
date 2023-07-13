@@ -14,7 +14,7 @@ exports.crearPaciente = async (req, res) => {
 
     } catch (error) {
         console.log(error);
-        res.status(500).send('hubo un error');
+        res.status(500).send('hubo un error al crear el paciente');
     }
 
 }
@@ -26,20 +26,20 @@ exports.obtenerPaciente = async (req, res) => {
         res.json(paciente)
     } catch (error) {
         console.log(error);
-        res.status(500).send("Hubo un error");
+        res.status(500).send("Hubo un error  en obtener al paciente");
     }
 }
 
 exports.actualizarPaciente =async (req, res) => {
 
     try {
-        const { nombre, apellido, fechaNacimiento, edad} = req.body;
+        const { cedula, nombre, apellido, fechaNacimiento, edad} = req.body;
         let paciente = await Paciente.findById(req.params.id);
 
         if(!paciente) {
             res.status(404).json({ msg: 'No existe el paciente solicitado' })
         }
-
+        paciente.cedula= cedula;
         paciente.nombre = nombre;
         paciente.apellido = apellido;
         paciente.fechaNacimiento =fechaNacimiento;
@@ -50,7 +50,7 @@ exports.actualizarPaciente =async (req, res) => {
 
     } catch (error) {
         console.log(error);
-        res.status(500).send('hubo un error');
+        res.status(500).send('hubo un error en actualizar el paciente');
     }
 }
 
@@ -67,7 +67,7 @@ exports.obtenerPacienteid =async (req, res) => {
 
     } catch (error) {
         console.log(error);
-        res.status(500).send('hubo un error');
+        res.status(500).send('hubo un error en obtener al paciente');
     }
 }
 
@@ -85,6 +85,6 @@ exports.eliminarPaciente =async (req, res) => {
 
     } catch (error) {
         console.log(error);
-        res.status(500).send('hubo un error');
+        res.status(500).send('hubo un error al eliminar el paciente');
     }
 }
