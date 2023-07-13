@@ -9,7 +9,54 @@
     <app-header></app-header>
 </header>
 <body>
-    <p>listar-doctor works!</p>
+    <div class="container mt-7">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <span class="titulo">Listado de Doctores</span>
+                        <button class="btn btn-success float-end">Agregar Doctor</button>
+                        <table class="table table-striped mt-4">
+                            <thead>
+                              <tr>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Apellido</th>
+                                <th scope="col">Especialidad</th>
+                                <th scope="col">Consultorio</th>
+                                <th scope="col">Correo Electronico</th>
+                                <th scope="col"></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td >Juan</td>
+                                <td>Garcia</td>
+                                <td>Medicina General</td>
+                                <td>205</td>
+                                <td>juanfacherito@ej.com</td>
+                                <td>
+                                    <i class="fas fa-sharp fa-solid fa-pen-to-square text-primary"></i>
+                                    <i class="fas fa-solid fa-trash text-danger"></i>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td >Pedro</td>
+                                <td>Ramirez</td>
+                                <td>Especialista Dermatologo</td>
+                                <td>407</td>
+                                <td>pedroejemplo@ej.com</td>
+                                <td>
+                                    <i class="fas fa-sharp fa-solid fa-pen-to-square text-primary"></i>
+                                    <i class="fas fa-solid fa-trash text-danger"></i>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <footer>
     <app-footer></app-footer>
