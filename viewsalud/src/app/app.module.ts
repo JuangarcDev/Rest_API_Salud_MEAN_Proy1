@@ -14,6 +14,10 @@ import { ListarPacienteComponent } from './components/listar-paciente/listar-pac
 import { InicioComponent } from './components/inicio/inicio.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CrearDoctorComponent } from './components/crear-doctor/crear-doctor.component';
+import { ListarDoctorComponent } from './components/listar-doctor/listar-doctor.component';
+import { CrearCitaComponent } from './components/crear-cita/crear-cita.component';
+import { ListarCitaComponent } from './components/listar-cita/listar-cita.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +27,10 @@ import { FooterComponent } from './components/footer/footer.component';
     InicioComponent,
     HeaderComponent,
     FooterComponent,
+    CrearDoctorComponent,
+    ListarDoctorComponent,
+    CrearCitaComponent,
+    ListarCitaComponent,
   ],
   imports: [
     BrowserModule,
