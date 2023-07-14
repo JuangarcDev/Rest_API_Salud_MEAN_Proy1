@@ -35,7 +35,7 @@
                                 <td>{{doctor.consultorio}}</td>
                                 <td>{{doctor.correo}}</td>
                                 <td>
-                                    <i class="fas fa-sharp fa-solid fa-pen-to-square text-primary"></i>
+                                    <i [routerLink]="['/editar-doctor', doctor._id]" class="fas fa-sharp fa-solid fa-pen-to-square text-primary"></i>
                                     <i (click)="eliminarDoctor(doctor._id)" class="fas fa-solid fa-trash text-danger"></i>
                                 </td>
                               </tr>

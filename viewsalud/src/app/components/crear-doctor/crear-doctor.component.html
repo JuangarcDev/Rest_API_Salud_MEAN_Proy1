@@ -14,7 +14,7 @@
             <div class="col-lg-6 offset-lg-3">
                 <div class="card">
                     <div class="card-body text-center" id="formulario-container">
-                        <span class="titulo">Nuevo Doctor</span>
+                        <span class="titulo">{{ titulo }}</span>
                         <form class="mt-4" [formGroup]="doctorForm" (ngSubmit)="agregarDoctor()">
                             <div class="mb-3">
                                 <input type="text" formControlName="nombre"
