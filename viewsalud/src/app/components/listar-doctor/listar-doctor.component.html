@@ -16,7 +16,7 @@
                     <div class="card-body text-center">
                         <span class="titulo">Listado de Doctores</span>
                         <button class="btn btn-success float-end" routerLink="/crear-doctor">Agregar Doctor</button>
-                        <table class="table table-striped mt-4">
+                        <table *ngIf="listDoctores.length >0" class="table table-striped mt-4">
                             <thead>
                               <tr>
                                 <th scope="col">Nombre</th>
@@ -28,30 +28,20 @@
                               </tr>
                             </thead>
                             <tbody>
-                              <tr>
-                                <td >Juan</td>
-                                <td>Garcia</td>
-                                <td>Medicina General</td>
-                                <td>205</td>
-                                <td>juanfacherito@ej.com</td>
+                              <tr *ngFor="let doctor of listDoctores">
+                                <td >{{doctor.nombre}}</td>
+                                <td>{{doctor.apellido}}</td>
+                                <td>{{doctor.especialidad}}</td>
+                                <td>{{doctor.consultorio}}</td>
+                                <td>{{doctor.correo}}</td>
                                 <td>
                                     <i class="fas fa-sharp fa-solid fa-pen-to-square text-primary"></i>
-                                    <i class="fas fa-solid fa-trash text-danger"></i>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td >Pedro</td>
-                                <td>Ramirez</td>
-                                <td>Especialista Dermatologo</td>
-                                <td>407</td>
-                                <td>pedroejemplo@ej.com</td>
-                                <td>
-                                    <i class="fas fa-sharp fa-solid fa-pen-to-square text-primary"></i>
-                                    <i class="fas fa-solid fa-trash text-danger"></i>
+                                    <i (click)="eliminarDoctor(doctor._id)" class="fas fa-solid fa-trash text-danger"></i>
                                 </td>
                               </tr>
                             </tbody>
                           </table>
+                          <h5 style="text-align: start; margin-top:10px;" *ngIf="listDoctores.length ==0">No hay doctores registrados para mostrar</h5>
                     </div>
                 </div>
             </div>
