@@ -1,0 +1,9 @@
+.text-danger {
+    text-align: start;
+    margin-left: 10px;
+  }
+
+  #formulario-container {
+    transform: scale(0.80); /* Ajusta la escala del div al 70% */
+    transform-origin: top; /* Define el punto de origen de la transformación */
+}

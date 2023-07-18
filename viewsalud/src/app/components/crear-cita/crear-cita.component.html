@@ -9,7 +9,59 @@
     <app-header></app-header>
 </header>
 <body>
-    <p>crear-cita works!</p>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="card">
+                    <div class="card-body text-center" id="formulario-container">
+                        <span class="titulo">Crear Cita</span>
+                        <form class="mt-4" [formGroup]="citaForm" (ngSubmit)="agregarCita()">
+                            <div class="mb-3">
+                                <input type="text" formControlName="ccPaciente"
+                                class="form-control form-control-lg" placeholder="Cedula Paciente">
+                                <div class="text-danger"
+                                *ngIf="citaForm.get('ccPaciente')?.hasError('required') && citaForm.get('ccPaciente')?.touched">
+                                    <span>La cedula del paciente es <strong>Obligatoria</strong></span>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="disabledSelect" class="form-label">Especialidad Cita</label>
+                                <select id="disabledSelect" formControlName="especialidadCita" class="form-select">
+                                  <option>Medicina general</option>
+                                  <option>Cardiología</option>
+                                  <option>Medicina interna</option>
+                                  <option>Dermatología</option>
+                                  <option>Rehabilitación física</option>
+                                  <option>Psicología</option>
+                                  <option>Odontología</option>
+                                  <option>Radiología</option>
+                                </select>
+                                <div class="text-danger"
+                                *ngIf="citaForm.get('especialidadCita')?.hasError('required') && citaForm.get('especialidadCita')?.touched">
+                                    <span>La especialidad de la cita es <strong>Obligatoria</strong></span>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Fecha de Cita</label>
+                                <input type="date" formControlName="fechaCita"
+                                    class="form-control form-control-lg" placeholder="Fecha de cita">
+                                    <div class="text-danger"
+                                    *ngIf="citaForm.get('fechaCita')?.hasError('required') && citaForm.get('fechaCita')?.touched">
+                                        <span>La fecha de la cita es <strong>Obligatoria</strong></span>
+                                    </div>
+                            </div>
+                            <div class="mb-3">
+                                <button routerLink="/listar-cita"
+                                class="btn btn-secondary btn-lg float-start">Cancelar</button>
+                                <button type="submit" [disabled]="citaForm.invalid" class="btn btn-success btn-lg float-end">Crear</button>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <footer>
     <app-footer></app-footer>
