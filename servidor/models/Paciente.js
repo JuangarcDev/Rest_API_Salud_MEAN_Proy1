@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 const PacienteSchema = mongoose.Schema({
     cedula: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     nombre: {
         type: String,
