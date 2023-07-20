@@ -34,8 +34,8 @@
                                     </div>
                             </div>
                             <div class="mb-3">
-                                <label for="disabledSelect" class="form-label">Especialidad Cita</label>
-                                <select id="disabledSelect" formControlName="especialidadCita" class="form-select">
+                                <label for="especialidadCita" class="form-label">Especialidad Cita</label>
+                                <select id="especialidadCita" formControlName="especialidadCita" class="form-select" (change)="cargarDoctoresPorEspecialidad()">
                                   <option>Medicina general</option>
                                   <option>Cardiología</option>
                                   <option>Medicina interna</option>
@@ -49,6 +49,13 @@
                                 *ngIf="citaForm.get('especialidadCita')?.hasError('required') && citaForm.get('especialidadCita')?.touched">
                                     <span>La especialidad de la cita es <strong>Obligatoria</strong></span>
                                 </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="doctorSelect" class="form-label">Nombre del Doctor:</label>
+                                <select id="doctorSelect" formControlName="nombreDoctor" class="form-select">
+                                  <!-- opciones de nombres de doctores que cumplen con la especialidad seleccionada -->
+                                  <option *ngFor="let doctor of doctores" [value]="doctor._id">{{ doctor.nombre }} {{ doctor.apellido }}</option>
+                                </select>
                             </div>
                             <div class="mb-3">
                                 <button routerLink="/listar-cita"

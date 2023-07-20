@@ -30,4 +30,8 @@ obtenerDoctor(id: string): Observable<any> {
 editarDoctor(id: string, doctor: Doctor): Observable<any> {
   return this.http.put(this.urldoctor + id, doctor);
 }
+//listar doctores para la lista desplegable
+obtenerDoctoresPorEspecialidad(especialidad: string): Observable<any> {
+  return this.http.get(this.urldoctor + 'especialidad/' + especialidad);
+}
 }

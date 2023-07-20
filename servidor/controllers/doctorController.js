@@ -82,3 +82,16 @@ exports.eliminarDoctor = async (req, res) => {
         res.status(500).send("Hubo un error ..");
     }
 }
+
+
+// Obtener doctores por especialidad
+exports.obtenerDoctoresPorEspecialidad = async (req, res) => {
+    try {
+      const especialidad = req.params.especialidad;
+      const doctores = await Doctor.find({ especialidad }, 'nombre apellido _id');
+      res.json(doctores);
+    } catch (error) {
+      console.log(error);
+      res.status(500).send("Hubo un error al obtener los doctores");
+    }
+  };

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Cita } from '../models/cita';
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +14,16 @@ export class CitaService {
   getCitas(): Observable<any>{
     return this.http.get(this.urlcita);
   }
-  //Obtiene los doctores para la lista desplegable
-  obtenerDoctoresPorEspecialidad(especialidad: string): Observable<any[]> {
-    return this.http.get<any[]>('${this.urlcita}?especialidad=${especialidad}');
+
+  //Eliminar
+  deleteCita(id: string): Observable<any>{
+    return this.http.delete(this.urlcita + id);
+  }
+
+  //Crear
+  persistirCita(cita: any) : Observable<any>{
+    return this.http.post(this.urlcita, cita);
   }
 }
+
+

@@ -16,7 +16,7 @@
                     <div class="card-body text-center">
                         <span class="titulo">Listado de Citas</span>
                         <button class="btn btn-success float-end" routerLink="/crear-cita" >Agregar Cita</button>
-                        <table class="table table-striped">
+                        <table *ngIf="listCitas.length > 0" class="table table-striped">
                             <thead>
                               <tr>
                                 <th scope="col">Cedula</th>
@@ -36,11 +36,12 @@
                                 <td>{{ cita.fechaCita | date }}</td>
                                 <td>{{ cita.idDoctor.consultorio }}</td>
                                 <td>
-                                   <i class="fas fa-solid fa-trash text-danger"></i>
+                                   <i (click)="deleteCita(cita._id)" class="fas fa-solid fa-trash text-danger"></i>
                                 </td>
                               </tr>
                             </tbody>
                           </table>
+                          <h5 style="text-align: start; margin-top: 10px;" *ngIf="listCitas.length == 0">No hay citas para Listar</h5>
                     </div>
                 </div>
             </div>
