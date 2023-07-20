@@ -25,6 +25,15 @@
                                 </div>
                             </div>
                             <div class="mb-3">
+                                <label class="form-label">Fecha de Cita</label>
+                                <input type="date" formControlName="fechaCita"
+                                    class="form-control form-control-lg" placeholder="Fecha de cita">
+                                    <div class="text-danger"
+                                    *ngIf="citaForm.get('fechaCita')?.hasError('required') && citaForm.get('fechaCita')?.touched">
+                                        <span>La fecha de la cita es <strong>Obligatoria</strong></span>
+                                    </div>
+                            </div>
+                            <div class="mb-3">
                                 <label for="disabledSelect" class="form-label">Especialidad Cita</label>
                                 <select id="disabledSelect" formControlName="especialidadCita" class="form-select">
                                   <option>Medicina general</option>
@@ -40,15 +49,6 @@
                                 *ngIf="citaForm.get('especialidadCita')?.hasError('required') && citaForm.get('especialidadCita')?.touched">
                                     <span>La especialidad de la cita es <strong>Obligatoria</strong></span>
                                 </div>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Fecha de Cita</label>
-                                <input type="date" formControlName="fechaCita"
-                                    class="form-control form-control-lg" placeholder="Fecha de cita">
-                                    <div class="text-danger"
-                                    *ngIf="citaForm.get('fechaCita')?.hasError('required') && citaForm.get('fechaCita')?.touched">
-                                        <span>La fecha de la cita es <strong>Obligatoria</strong></span>
-                                    </div>
                             </div>
                             <div class="mb-3">
                                 <button routerLink="/listar-cita"

@@ -3,7 +3,11 @@ const router = express.Router();
 const citaController = require('../controllers/citaController');
 
 // Rutas para las citas
+//Crear nueva cita
 router.post('/', citaController.crearCita);
-// Agrega el resto de las rutas para obtener, actualizar y eliminar citas
-
+//Listar citas
+router.get('/', citaController.obtenerCitas);
+//Eliminar Cita
+router.delete('/:id', citaController.eliminarCita);
+//Se exportan las rutas
 module.exports = router;

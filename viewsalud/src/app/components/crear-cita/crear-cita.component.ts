@@ -48,7 +48,9 @@ export class CrearCitaComponent implements OnInit {
     console.log(this.citaForm);
 
     console.log(this.citaForm.get('ccPaciente')?.value);
+    console.log(this.citaForm.get('especialidadCita')?.value);
     
+
     const CITA: Cita = {
       ccPaciente: this.citaForm.get('ccPaciente')?.value,
       especialidadCita: this.citaForm.get('especialidadCita')?.value,
