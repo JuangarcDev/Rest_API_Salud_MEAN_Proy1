@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { parseISO } from 'date-fns';
 import { HttpClient } from '@angular/common/http';
+import { CitaService } from 'src/app/services/cita.service';
 
 
 
@@ -27,6 +28,7 @@ function fechaCitaValidator (control: AbstractControl): { [key: string]: boolean
   styleUrls: ['./crear-cita.component.css']
 })
 
+
 export class CrearCitaComponent implements OnInit {
   citaForm: FormGroup;
   constructor(private fb: FormBuilder,
@@ -34,7 +36,7 @@ export class CrearCitaComponent implements OnInit {
               private toastr: ToastrService,
               private http: HttpClient) {
     this.citaForm = this.fb.group({
-      ccPaciente: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
+      idPaciente: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
       especialidadCita: ['', Validators.required],
       fechaCita: ['',[fechaCitaValidator, Validators.required]]
     })
@@ -44,17 +46,19 @@ export class CrearCitaComponent implements OnInit {
     
   }
 
+
   agregarCita() {
     console.log(this.citaForm);
 
-    console.log(this.citaForm.get('ccPaciente')?.value);
+    console.log(this.citaForm.get('idPaciente')?.value);
     console.log(this.citaForm.get('especialidadCita')?.value);
     
 
     const CITA: Cita = {
-      ccPaciente: this.citaForm.get('ccPaciente')?.value,
+      idPaciente: this.citaForm.get('idPaciente')?.value,
       especialidadCita: this.citaForm.get('especialidadCita')?.value,
       fechaCita: parseISO(this.citaForm.get('fechaCita')?.value),
+      idDoctor: '',
       nombrePaciente: '1',
       nombreDoctor: '2',
     }

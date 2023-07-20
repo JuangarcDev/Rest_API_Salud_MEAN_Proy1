@@ -17,10 +17,10 @@
                         <span class="titulo">Crear Cita</span>
                         <form class="mt-4" [formGroup]="citaForm" (ngSubmit)="agregarCita()">
                             <div class="mb-3">
-                                <input type="text" formControlName="ccPaciente"
+                                <input type="text" id="idPaciente" formControlName="idPaciente"
                                 class="form-control form-control-lg" placeholder="Cedula Paciente">
                                 <div class="text-danger"
-                                *ngIf="citaForm.get('ccPaciente')?.hasError('required') && citaForm.get('ccPaciente')?.touched">
+                                *ngIf="citaForm.get('idPaciente')?.hasError('required') && citaForm.get('idPaciente')?.touched">
                                     <span>La cedula del paciente es <strong>Obligatoria</strong></span>
                                 </div>
                             </div>

@@ -1,13 +1,15 @@
 export class Cita {
-    _id?: number;
-    ccPaciente: string;
-    nombrePaciente: String;
+    _id?: string;
+    idPaciente: any;
+    idDoctor: any;
+    nombrePaciente: string;
     especialidadCita: string;
     nombreDoctor: string;
     fechaCita: Date;
 
-    constructor(ccPaciente: string, nombrePaciente: string, especialidadCita: string, nombreDoctor: string, fechaCita: Date) {
-        this.ccPaciente = ccPaciente;
+    constructor(idPaciente: any, idDoctor: any, nombrePaciente: string, especialidadCita: string, nombreDoctor: string, fechaCita: Date) {
+        this.idPaciente = idPaciente;
+        this.idDoctor = idDoctor;
         this.nombrePaciente = nombrePaciente;
         this.especialidadCita = especialidadCita;
         this.nombreDoctor = nombreDoctor;

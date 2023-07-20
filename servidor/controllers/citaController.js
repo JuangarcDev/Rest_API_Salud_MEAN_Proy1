@@ -35,9 +35,10 @@ exports.obtenerCitas = async (req, res) => {
   try {
     const citas = await Cita.find()
       .populate('idPaciente', 'cedula nombre apellido') // Muestra solo cedula, nombre y apellido del paciente
-      .populate('idDoctor', 'especialidad nombre apellido') // Muestra solo especialidad, nombre y apellido del doctor
+      .populate('idDoctor', 'especialidad nombre apellido consultorio') // Muestra solo especialidad, nombre y apellido del doctor
       .select('idPaciente idDoctor fechaCita'); // Muestra solo estos campos de la cita
 
+    console.log(citas);    
     res.json(citas);
   } catch (error) {
     console.log(error);
