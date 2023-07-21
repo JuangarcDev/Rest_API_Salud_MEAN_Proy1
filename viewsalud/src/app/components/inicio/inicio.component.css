@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15%;
+  }
+
+  html{
+    height:100%;
+  }
+
+  .wrapper {
+    flex: 1;
+  }
+  
+  .footer {
+    flex-shrink: 0;
+  }
+  
+  .description, .about-project {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1, h2 {
+    text-align: center;
+  }
+
+  .imagen-carrusel {
+    width: 400px; /* Establece el ancho deseado */
+    height: 300px; /* Establece el alto deseado */
+  }
+
+
+  
+
+  

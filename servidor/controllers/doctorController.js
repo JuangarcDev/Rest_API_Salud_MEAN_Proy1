@@ -87,8 +87,8 @@ exports.eliminarDoctor = async (req, res) => {
 // Obtener doctores por especialidad
 exports.obtenerDoctoresPorEspecialidad = async (req, res) => {
     try {
-      const especialidad = req.params.especialidad;
-      const doctores = await Doctor.find({ especialidad }, 'nombre apellido _id');
+      let especialidad = req.params.especialidad;
+      let doctores = await Doctor.find({ especialidad }, 'nombre apellido _id');
       res.json(doctores);
     } catch (error) {
       console.log(error);
