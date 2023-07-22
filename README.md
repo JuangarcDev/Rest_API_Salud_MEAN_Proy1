@@ -131,14 +131,24 @@ El aplicativo cuenta con varias  rutas principales
 
 https://github.com/JuangarcDev/Rest_API_Salud_MEAN_Proy1/assets/131199084/f60e2ca0-5e3f-415e-8220-68d9fe529129
 
+Como podemos ver una pequeña descripción del servicio un carrusel de fotos y su respectivo header y footer.
 
---La página de Listar Pacientes
+--La página de Pacientes
 
---La página de Crear Nuevo Paciente
+https://github.com/JuangarcDev/Rest_API_Salud_MEAN_Proy1/assets/131199084/0ba5ae28-1ef8-40ba-87fc-5c602bbf6354
 
---La página de Editar un Paciente existente
+Como podemos ver una pestaña, en la cual al inicio se listan los pacientes y se puede crear un nuevo paciente, editar o eliminar uno existente.
 
+--La página de Doctores
 
+https://github.com/JuangarcDev/Rest_API_Salud_MEAN_Proy1/assets/131199084/e99481ff-fff5-42d7-8b2c-81f561d5af68
+
+Como podemos ver una pestaña, en la cual al inicio se listan los doctores y se puede crear un nuevo doctor, editar o eleminar uno existente.
+--La página de Citas
+
+https://github.com/JuangarcDev/Rest_API_Salud_MEAN_Proy1/assets/131199084/04394b20-4972-4613-909a-dcc028181bca
+
+Como podemos ver una pestaña, en la cual al inicio se listan las citas y se puede crear una nueva cita o eliminar uno existente. Para crearla la cedula debe existir en la colección de paciente, además debe haber al menos un doctor con la especialidad solicitada, si es más de uno podrá elegir al  doctor con el cual le gustaría tener la cita y finalmente la fecha de la cita que debe ser una fecha superior al momento en que se pide la cita.
 
 ## Integrantes
 El proyecto fue desarrollado en su totalidad por
