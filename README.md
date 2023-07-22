@@ -1,6 +1,6 @@
 # Rest_API_Salud_MEAN_Proy1
 
-## Introducción
+## Introducción :rocket: :alarm_clock:
 Un aplicativo web REST API, que por medio de formularios reciba información de: Pacientes, Doctores y pueda agendar citas entre los mismos. Se utilizará el stack MEAN y es uno de los proyectos finales del programa Todos a la U.
 
 Se utilizará una carpeta para el cliente y otra para el servidor. Puedes modificar el puerto que utiliza el cliente o el servidor, en caso de que estén ocupados o que así lo prefieras.
@@ -11,7 +11,7 @@ Cliente: 4200
 
 Servidor: 4000
 
-## Tecnologías utilizadas
+## Tecnologías utilizadas :heavy_check_mark:
 Las principales tecnologías que fueron utilizadas en este proyecto son:
 
 -mongoose v 7.3.2
@@ -30,7 +30,7 @@ Las principales tecnologías que fueron utilizadas en este proyecto son:
 
 -nodemon v 3.0.1
 
-## Instalación
+## Instalación :heavy_check_mark:
 Primero clona el contenido de este repositorio, en una carpeta que tengas destinada para tal fin, después dentro de la carpeta dale click derecho y en Git Bash here o similares. Asegurate que la dirección de la carpeta coincida con dónde quieres que se clone el  repositorio y ejecuta la siguiente instrucción.
 
 'git clone https://github.com/JuangarcDev/Rest_API_Salud_MEAN_Proy1.git'
@@ -64,8 +64,7 @@ Listo con estos pasos habrás hecho lo necesario para que la aplicación funcion
 'http://localhost:4200/'
 
 
-## Endpoints
-
+## Endpoints :heavy_check_mark:
 Se utiliza el siguiente esquema de colecciones de datos:
 
 ![Modelo_Datos](https://github.com/JuangarcDev/Rest_API_Salud_MEAN_Proy1/assets/131199084/48351423-f10d-4482-86e6-3981a18a671b)
@@ -130,8 +129,7 @@ No se crea EDITAR, principalmente porque es la forma tradicional que se manejan 
 
 Para ver cada endpoint en especifico, puede visualizar el DOCUMENTO PDF incluido en el repositorio llamado DOCUMENTO_PRUEBAS_UNITARIAS
 
-## Funcionamiento Aplicativo
-
+## Funcionamiento Aplicativo :heavy_check_mark:
 El aplicativo cuenta con varias  rutas principales
 
 --La página de inicio
@@ -157,6 +155,8 @@ https://github.com/JuangarcDev/Rest_API_Salud_MEAN_Proy1/assets/131199084/04394b
 
 Como podemos ver una pestaña, en la cual al inicio se listan las citas y se puede crear una nueva cita o eliminar uno existente. Para crearla la cedula debe existir en la colección de paciente, además debe haber al menos un doctor con la especialidad solicitada, si es más de uno podrá elegir al  doctor con el cual le gustaría tener la cita y finalmente la fecha de la cita que debe ser una fecha superior al momento en que se pide la cita.
 
-## Integrantes
+## Integrantes :heavy_check_mark:
 El proyecto fue desarrollado en su totalidad por
+
+
 -Juan Carlos Garcia Guerrero
