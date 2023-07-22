@@ -71,7 +71,7 @@ Se utiliza app.use() para definir los prefijos de las rutas de los endpoints y a
 
 Ahora veamos las rutas de los endpoints en el archivo cita.js, doctor.js y paciente.js, en las rutas. utilizando router.post(), router.get() y router.delete() para especificar las rutas y los controladores asociados.
 
-cita.js
+paciente.js
 
 ![Endpoint_PACIENTE](https://github.com/JuangarcDev/Rest_API_Salud_MEAN_Proy1/assets/131199084/25406fca-bac2-4d19-969c-72ca84a6964c)
 
@@ -107,7 +107,7 @@ Ademas tenemos una ruta adicional, que será consumida para la creación de las 
 
 --Lista los doctores que tengan una especialidad especifica
 
-paciente.js
+cita.js
 
 ![Endpoint_CITA](https://github.com/JuangarcDev/Rest_API_Salud_MEAN_Proy1/assets/131199084/2202540c-ce12-46d2-a14f-cc2d6c989565)
 
@@ -124,6 +124,20 @@ No se crea EDITAR, principalmente porque es la forma tradicional que se manejan 
 Para ver cada endpoint en especifico, puede visualizar el DOCUMENTO PDF incluido en el repositorio llamado DOCUMENTO_PRUEBAS_UNITARIAS
 
 ## Funcionamiento Aplicativo
+
+El aplicativo cuenta con varias  rutas principales
+
+--La página de inicio
+
+https://github.com/JuangarcDev/Rest_API_Salud_MEAN_Proy1/assets/131199084/f60e2ca0-5e3f-415e-8220-68d9fe529129
+
+
+--La página de Listar Pacientes
+
+--La página de Crear Nuevo Paciente
+
+--La página de Editar un Paciente existente
+
 
 
 ## Integrantes
