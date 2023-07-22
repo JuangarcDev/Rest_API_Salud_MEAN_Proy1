@@ -65,6 +65,63 @@ Listo con estos pasos habrás hecho lo necesario para que la aplicación funcion
 
 ## Endpoints
 
+Se utiliza app.use() para definir los prefijos de las rutas de los endpoints y asociarlos a los controladores correspondientes. En este caso, las rutas de los endpoints están definidas en  archivos separados (paciente.js, doctor.js y cita.js) y se importan y se asocian en el archivo  principal de la aplicación. Se tienen 3 diferentes una por cada componente grande: paciente, doctor y cita. Como se puede apreciar a continuación.
+
+![Endpoint_app](https://github.com/JuangarcDev/Rest_API_Salud_MEAN_Proy1/assets/131199084/b4cbbffa-5e76-47cd-a631-849cb7ec7582)
+
+Ahora veamos las rutas de los endpoints en el archivo cita.js, doctor.js y paciente.js, en las rutas. utilizando router.post(), router.get() y router.delete() para especificar las rutas y los controladores asociados.
+
+cita.js
+
+![Endpoint_PACIENTE](https://github.com/JuangarcDev/Rest_API_Salud_MEAN_Proy1/assets/131199084/25406fca-bac2-4d19-969c-72ca84a6964c)
+
+Como podemos apreciar tenemos individualizado, para cada petición que vamos a realizar, en orden tenemos
+
+-- Crear nuevo paciente
+
+-- Lista todos los pacientes
+
+-- Actualizar/editar un paciente especifico
+
+-- Obtener un paciente especifico
+
+-- Eliminar un paciente especifico
+
+doctor.js
+
+![Endpoint_DOCTOR](https://github.com/JuangarcDev/Rest_API_Salud_MEAN_Proy1/assets/131199084/efef6d13-7da2-4daf-9909-80564075878f)
+
+Como podemos apreciar también esta individualizado, para cada petición que vamos a realizar, en orden tenemos
+
+-- Crear nuevo doctor
+
+-- Lista todos los doctores
+
+-- Actualizar/editar un doctor especifico
+
+-- Obtener un doctor especifico
+
+-- Eliminar un doctor especifico
+
+Ademas tenemos una ruta adicional, que será consumida para la creación de las citas, la cual lista los nombres de todos los doctores que cumplen con una especialidad requerida
+
+--Lista los doctores que tengan una especialidad especifica
+
+paciente.js
+
+![Endpoint_CITA](https://github.com/JuangarcDev/Rest_API_Salud_MEAN_Proy1/assets/131199084/2202540c-ce12-46d2-a14f-cc2d6c989565)
+
+Como podemos apreciar también esta individualizado, para cada petición que vamos a realizar, en orden tenemos
+
+-- Crear nueva cita
+
+-- Lista todas las citas
+
+-- Eliminar una cita en especifico
+
+No se crea EDITAR, principalmente porque es la forma tradicional que se manejan las citas, como se consideran compromisos no son tan fáciles de modificar, sino que se puede eliminar la cita o crear una nueva
+
+Para ver cada endpoint en especifico, puede visualizar el DOCUMENTO PDF incluido en el repositorio llamado DOCUMENTO_PRUEBAS_UNITARIAS
 
 ## Funcionamiento Aplicativo
 
