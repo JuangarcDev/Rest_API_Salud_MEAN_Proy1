@@ -65,6 +65,12 @@ Listo con estos pasos habrás hecho lo necesario para que la aplicación funcion
 
 ## Endpoints
 
+Se utiliza el siguiente esquema de colecciones de datos:
+
+![Modelo_Datos](https://github.com/JuangarcDev/Rest_API_Salud_MEAN_Proy1/assets/131199084/48351423-f10d-4482-86e6-3981a18a671b)
+
+El cual se podría pulir más a detalle y crear en colecciones independientes la especialidad y el consultorio, la especialidad estaría relacionado con el doctor y el consultorio estaría relacionado con la cita. Pero se utiliza un esquema más básico con solo 3 colecciones puesto que por la necesidad del proyecto no se ahonda en la importancia de la especialidad ni del consultorio.
+
 Se utiliza app.use() para definir los prefijos de las rutas de los endpoints y asociarlos a los controladores correspondientes. En este caso, las rutas de los endpoints están definidas en  archivos separados (paciente.js, doctor.js y cita.js) y se importan y se asocian en el archivo  principal de la aplicación. Se tienen 3 diferentes una por cada componente grande: paciente, doctor y cita. Como se puede apreciar a continuación.
 
 ![Endpoint_app](https://github.com/JuangarcDev/Rest_API_Salud_MEAN_Proy1/assets/131199084/b4cbbffa-5e76-47cd-a631-849cb7ec7582)
